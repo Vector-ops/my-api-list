@@ -3,4 +3,8 @@
 const program = require("commander");
 const pkg = require("../package.json");
 
-program.version(pkg.version).command("mapil", "Mapil CLI").parse(process.argv);
+program
+  .version(pkg.version)
+  .command("user", "Create a user")
+  .command("key", "Use api key")
+  .parse(process.argv);
