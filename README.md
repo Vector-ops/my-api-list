@@ -1,2 +1,2 @@
-# my-api-list
+# mapil
  A simple command line tool to store and retrieve api keys
