@@ -22,8 +22,8 @@ const user = {
         validate: isRequired,
       },
     ]);
-    newUser.username = input.username;
-    newUser.password = input.password;
+    newUser.setCredentials(input.username, input.password);
+    console.log("Registration successful".green);
   },
   login: async () => {
     try {
@@ -45,7 +45,7 @@ const user = {
         },
       ]);
       userRecord.verify(input.username, input.password);
-      if (userRecord.isVerified) {
+      if (userRecord.getIsVerified) {
         console.log("Login successful".green);
       }
     } catch (error) {
