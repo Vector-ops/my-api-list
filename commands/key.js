@@ -7,6 +7,10 @@ const UserRecord = require("../lib/UserRecord");
 const key = {
   add: async () => {
     const keyManager = new KeyManager();
+    if (!keyManager.getKey("isVerified")) {
+      console.log("You must be logged in to view your API keys".red);
+      return;
+    }
     const input = await inquirer.prompt([
       {
         type: "input",
@@ -27,6 +31,10 @@ const key = {
   del: async () => {
     try {
       const keyManager = new KeyManager();
+      if (!keyManager.getKey("isVerified")) {
+        console.log("You must be logged in to view your API keys".red);
+        return;
+      }
       const input = await inquirer.prompt([
         {
           type: "input",
@@ -44,6 +52,10 @@ const key = {
   upd: async () => {
     try {
       const keyManager = new KeyManager();
+      if (!keyManager.getKey("isVerified")) {
+        console.log("You must be logged in to view your API keys".red);
+        return;
+      }
       const input = await inquirer.prompt([
         {
           type: "input",
@@ -53,6 +65,10 @@ const key = {
         },
       ]);
       keyManager.getKey(input.name);
+      if (!keyManager.getKey("isVerified")) {
+        console.log("You must be logged in to view your API keys".red);
+        return;
+      }
       const inputKey = await inquirer.prompt([
         {
           type: "input",
@@ -70,6 +86,10 @@ const key = {
   get: async () => {
     try {
       const keyManager = new KeyManager();
+      if (!keyManager.getKey("isVerified")) {
+        console.log("You must be logged in to view your API keys".red);
+        return;
+      }
       const input = await inquirer.prompt([
         {
           type: "input",
@@ -87,6 +107,10 @@ const key = {
   list: async () => {
     try {
       const keyManager = new KeyManager();
+      if (!keyManager.getKey("isVerified")) {
+        console.log("You must be logged in to view your API keys".red);
+        return;
+      }
       const keys = keyManager.getAllKeys();
       console.log(keys);
     } catch (error) {
