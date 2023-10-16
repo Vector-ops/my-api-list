@@ -38,13 +38,13 @@ const key = {
 					type: "list",
 					name: "name",
 					message: "Select the API key".green,
-					choices: list.splice(0),
+					choices: list,
 					loop: true,
 					validate: isRequired,
 				},
 			]);
 			keyManager.deleteKey(input.name);
-			console.log("Key deleted".blue);
+			console.log("API key " + input.name.green + " deleted");
 		} catch (error) {
 			console.error(error.message.red);
 		}
@@ -52,11 +52,15 @@ const key = {
 	upd: async () => {
 		try {
 			const keyManager = new KeyManager();
+			const keys = keyManager.getAllKeys();
+			const list = Object.entries(Object.keys(keys))[0];
 			const input = await inquirer.prompt([
 				{
-					type: "input",
+					type: "list",
 					name: "name",
-					message: "Enter the name of the API key".green,
+					message: "Select the API key".green,
+					choices: list,
+					loop: true,
 					validate: isRequired,
 				},
 			]);
@@ -70,7 +74,7 @@ const key = {
 				},
 			]);
 			keyManager.setKey(input.name, inputKey.key);
-			console.log("Key updated".blue);
+			console.log("API key " + input.name.yellow + " updated");
 		} catch (error) {
 			console.error(error.message.red);
 		}
@@ -78,16 +82,20 @@ const key = {
 	get: async () => {
 		try {
 			const keyManager = new KeyManager();
+			const keys = keyManager.getAllKeys();
+			const list = Object.entries(Object.keys(keys))[0];
 			const input = await inquirer.prompt([
 				{
-					type: "input",
+					type: "list",
 					name: "name",
-					message: "Enter the name of the API key".green,
+					message: "Select the API key".green,
+					choices: list,
+					loop: true,
 					validate: isRequired,
 				},
 			]);
 			const key = keyManager.getKey(input.name);
-			console.log(`Name: ${input.name.green} \nKey: ${key.yellow}`);
+			console.log(`${input.name.green}: ${key.yellow}`);
 		} catch (error) {
 			console.error(error.message.red);
 		}
@@ -96,7 +104,9 @@ const key = {
 		try {
 			const keyManager = new KeyManager();
 			const keys = keyManager.getAllKeys();
-			console.log(keys);
+			for (const [key, value] of Object.entries(keys)) {
+				console.log(`${key.green}: ${value.yellow}`);
+			}
 		} catch (error) {
 			console.error(error.message.red);
 		}

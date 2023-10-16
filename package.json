@@ -1,20 +1,20 @@
 {
-  "name": "mapil",
-  "version": "1.0.0",
-  "description": "A simple command line tool to store and retrieve api keys",
-  "main": "index.js",
-  "bin": "./bin/mapil.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "url": "https://github.com/Vector-ops/my-api-list",
-  "email": "sumith2827@gmail.com",
-  "author": "Sumith B H",
-  "license": "ISC",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "commander": "^10.0.1",
-    "configstore": "^5.0.1",
-    "inquirer": "^8.2.6"
-  }
+	"name": "mapil",
+	"version": "1.2.0",
+	"description": "A simple command line tool to store and retrieve api keys",
+	"main": "index.js",
+	"bin": "./bin/mapil.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"url": "https://github.com/Vector-ops/my-api-list",
+	"email": "sumith2827@gmail.com",
+	"author": "Sumith B H",
+	"license": "ISC",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"commander": "^10.0.1",
+		"configstore": "^5.0.1",
+		"inquirer": "^8.2.6"
+	}
 }
