@@ -1,6 +1,6 @@
 # Mapil - Manage Your API Keys Easily
 
-Mapil is a command-line tool built with Node.js, designed to simplify the management of your API keys. With Mapil, you can securely store, retrieve, update, and delete your API keys with ease, all from the command line. Whether you're a developer managing multiple API services or just someone who wants a convenient and secure way to handle API keys, Mapil has got you covered.
+Mapil is a command-line tool built with Node.js, designed to simplify the management of your API keys. With Mapil, you can store, retrieve, update, and delete your API keys with ease, all from the command line. Whether you're a developer managing multiple API services or just someone who wants a convenient and secure way to handle API keys, Mapil has got you covered.
 
 ## Installation
 
