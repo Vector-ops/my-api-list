@@ -13,7 +13,9 @@ program
 	.description("Delete a key")
 	.action(() => {
 		key.del();
-	});
+	})
+	.option("-a", "Delete all keys.")
+	.action((cmd) => key.del(cmd));
 
 program
 	.command("upd")

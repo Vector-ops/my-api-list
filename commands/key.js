@@ -23,14 +23,23 @@ const key = {
 
 		keyManager.setKey(input.name, input.key);
 	},
-	del: async () => {
+	del: async ({ a }) => {
 		try {
 			const keyManager = new KeyManager();
+			const keys = keyManager.getAllKeys();
+			if (a) {
+				keyManager.deleteAll();
+				console.log("Deleted all keys.".green);
+				return;
+			}
+			const list = Object.entries(Object.keys(keys))[0];
 			const input = await inquirer.prompt([
 				{
-					type: "input",
+					type: "list",
 					name: "name",
-					message: "Enter the name of the API key".green,
+					message: "Select the API key".green,
+					choices: list.splice(0),
+					loop: true,
 					validate: isRequired,
 				},
 			]);
