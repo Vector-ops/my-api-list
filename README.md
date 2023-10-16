@@ -83,4 +83,4 @@ $ mapil key list
 No API keys found.
 ```
 
-Mapil simplifies API key management, making it easy and secure to handle your keys directly from the command line.
+Mapil simplifies API key management, making it easy to handle your keys directly from the command line.

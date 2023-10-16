@@ -1,15 +1,17 @@
 {
 	"name": "mapil",
-	"version": "1.2.0",
+	"version": "1.2.3",
 	"description": "A simple command line tool to store and retrieve api keys",
 	"main": "index.js",
 	"bin": "./bin/mapil.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"url": "https://github.com/Vector-ops/my-api-list",
-	"email": "sumith2827@gmail.com",
+	"url": "https://github.com/Vector-ops/mapil",
 	"author": "Sumith B H",
+	"keywords": [
+		"API keys",
+		"keys",
+		"CLI",
+		"command line tool"
+	],
 	"license": "ISC",
 	"dependencies": {
 		"colors": "^1.4.0",
