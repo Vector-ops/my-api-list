@@ -44,7 +44,7 @@ const key = {
 				},
 			]);
 			keyManager.deleteKey(input.name);
-			console.log("API key " + input.name.green + " deleted");
+			console.log("API key " + input.name.yellow + " deleted");
 		} catch (error) {
 			console.error(error.message.red);
 		}
